@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+study_buddy_venv1/
+venv/
+
+# Env files
+.env
+backend/.env
+frontend/.env
+.env.local
+.env.production
+
+# Node / Next
+node_modules/
+.next/
+out/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build / logs
+dist/
+build/
+coverage/
+*.log
+
+# FastAPI
+*.log
+*.sqlite3
