@@ -35,7 +35,7 @@ export default function DashboardPage() {
   }, []);
 
   const loadUser = async () => {
-    const res = await fetch("http://localhost:8000/auth/me", {
+    const res = await fetch((`${process.env.NEXT_PUBLIC_API_URL}/auth/me`), {
       headers: { Authorization: `Bearer ${token}` }
     });
 
@@ -44,7 +44,7 @@ export default function DashboardPage() {
   };
 
   const loadStats = async () => {
-    const res = await fetch("http://localhost:8000/user/stats", {
+    const res = await fetch((`${process.env.NEXT_PUBLIC_API_URL}/user/stats`), {
       headers: { Authorization: `Bearer ${token}` }
     });
 

@@ -29,7 +29,7 @@ export default function StartSession() {
 
     try {
 
-      const res = await fetch("http://localhost:8000/planner/generate", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/planner/generate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ goal, duration, difficulty })
@@ -71,7 +71,7 @@ export default function StartSession() {
 
     try {
 
-      const res = await fetch("http://localhost:8000/session/start", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/session/start`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

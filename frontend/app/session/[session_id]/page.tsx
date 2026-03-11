@@ -29,36 +29,36 @@ export default function SessionDetailPage() {
 
     const token = localStorage.getItem("token")
 
-    const res = await fetch(
-      `http://localhost:8000/sessions/${session_id}`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/sessions/${session_id}`, 
+        {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
         }
-      }
-    )
+      )
 
-    const data = await res.json()
+      const data = await res.json()
 
-    console.log("SESSION DATA:", data)
+      console.log("SESSION DATA:", data)
 
-    setSession(data.session)
-    setReport(data.report)
-    setQuizAttempts(data.quiz_attempts || [])
+      setSession(data.session)
+      setReport(data.report)
+      setQuizAttempts(data.quiz_attempts || [])
 
-    setLoading(false)
-  }
+      setLoading(false)
+    }
 
-  const downloadReport = async () => {
+    const downloadReport = async () => {
 
-    const token = localStorage.getItem("token")
+      const token = localStorage.getItem("token")
 
-    const res = await fetch(
-      `http://localhost:8000/sessions/${session_id}/download`,
-      {
-        headers: { Authorization: `Bearer ${token}` }
-      }
-    )
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/sessions/${session_id}/download`,
+        {
+          headers: { Authorization: `Bearer ${token}` }
+        }
+      )
 
     const blob = await res.blob()
 

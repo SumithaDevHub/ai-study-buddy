@@ -32,7 +32,7 @@ export default function HistoryPage() {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        "http://localhost:8000/sessions/history",
+        `${process.env.NEXT_PUBLIC_API_URL}/sessions/history`,
         {
           headers: {
             Authorization: `Bearer ${token}`
