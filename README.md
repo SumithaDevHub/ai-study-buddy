@@ -8,7 +8,11 @@ Instead of scattered notes and distracting group chats, AI Study Buddy provides 
 
 ## Live Project
 
-Coming soon
+Frontend  
+https://ai-study-buddy-kappa-flame.vercel.app
+
+Backend API  
+https://ai-study-buddy-lobd.onrender.com/docs
 
 ---
 
@@ -48,47 +52,45 @@ Goal → AI Planner → Study Session → Quiz Validation → XP + Streak → An
 
 # Tech Stack
 
-## Frontend
-
+### Frontend
 - Next.js (App Router)
 - TailwindCSS
 
-## Backend
-
+### Backend
 - FastAPI
+- Python
 - Groq (Llama3)
 
-## Database
-
+### Database
 - Supabase (PostgreSQL)
 
-## AI / Vision
+### AI / Vision
+- MediaPipe (Focus Detection)
 
-- MediaPipe (focus detection)
-
-## Deployment
-
-- Vercel (frontend)
-- Render (backend)
+### Deployment
+- Vercel (Frontend)
+- Render (Backend)
 
 ---
 
 # Project Structure
 
-STUDY_BUDDY_V1
+# Project Structure
+
+ai-study-buddy
 │
 ├── backend
-│ ├── api
-│ ├── agents
-│ ├── services
-│ ├── repositories
-│ ├── schemas
-│ └── main.py
+│   ├── api
+│   ├── agents
+│   ├── services
+│   ├── repositories
+│   ├── schemas
+│   └── main.py
 │
 ├── frontend
-│ ├── app
-│ ├── components
-│ ├── lib
+│   ├── app
+│   ├── components
+│   ├── lib
 │
 ├── README.md
 └── .gitignore
@@ -137,8 +139,8 @@ RUN LOCALLY
 
 Clone the repository
 
-git clone https://github.com/YOUR_USERNAME/ai-study-buddy.git
-cd STUDY_BUDDY_V1
+git clone https://github.com/SumithaDevHub/ai-study-buddy.git
+cd ai-study-buddy
 
 ---
 
@@ -201,6 +203,15 @@ SUPABASE_KEY=your_supabase_key
 JWT_SECRET=your_secret
 GROQ_API_KEY=your_groq_key
 
+## Frontend Environment Variables
+
+Create a `.env.local` file inside the `frontend` folder.
+
+Example:
+
+NEXT_PUBLIC_API_URL=https://ai-study-buddy-lobd.onrender.com
+
+
 ---
 
 ## AUTHORS
@@ -212,6 +223,10 @@ Sumitha S
 asr.sumitha@gmail.com
 
 ---
+
+## License
+
+This project is for educational and portfolio purposes.
 
 ## FUTURE IMPROVEMENTS
 
